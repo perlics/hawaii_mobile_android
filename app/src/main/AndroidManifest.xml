@@ -20,7 +20,7 @@
         </activity>
         <activity
             android:name=".ui.CreateLeaveRequestActivity"
-            android:label="@string/title_activity_create_leave_request"
+            android:label="@string/create_new_request"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>

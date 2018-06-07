@@ -1,15 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
     tools:context="eu.execom.android.hawaii.ui.fragment.CreateLeaveRequestActivityFragment"
     tools:showIn="@layout/activity_create_leave_request">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Create Request"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose reason:" />
 
-</android.support.constraint.ConstraintLayout>
+    <Spinner
+        android:id="@+id/reasonChooser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:entries="@array/request_reasons"
+        android:prompt="@string/reason_prompt" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/tvFrom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="From: " />
+
+        <Button
+            android:id="@+id/btnPickFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/tvTo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="To: " />
+
+        <Button
+            android:id="@+id/btnPickTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick" />
+    </LinearLayout>
+
+</LinearLayout>

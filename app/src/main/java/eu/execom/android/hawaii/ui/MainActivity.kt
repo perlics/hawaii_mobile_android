@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
+        fab.setOnClickListener { _ ->
             val intent = Intent(this, CreateLeaveRequestActivity::class.java)
             startActivity(intent)
         }
@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
-    fun setView(fragmentClass: Class<*>?, appBarTitle: CharSequence) {
+    private fun setView(fragmentClass: Class<*>?, appBarTitle: CharSequence) {
         var fragment: Fragment? = null
         try {
             fragment = fragmentClass?.newInstance() as Fragment

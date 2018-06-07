@@ -13,5 +13,12 @@
     <string name="share">Share</string>
     <string name="send">Send</string>
 
+    <string name="create_new_request">Create New Request</string>
+    <string name="reason_prompt">Choose a reason</string>
+    <string-array name="request_reasons">
+        <item>Leave</item>
+        <item>Sickness</item>
+        <item>Bonus days</item>
+    </string-array>
 
 </resources>

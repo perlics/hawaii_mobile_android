@@ -4,11 +4,9 @@
     android:layout_height="match_parent"
     tools:context="eu.execom.android.hawaii.ui.fragment.LeaveHistoryFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvLeaveHistory"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Leave History" />
+        android:layout_height="wrap_content" />
 
 </FrameLayout>
