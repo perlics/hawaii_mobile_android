@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.fragment_leave_history.*
 
 class LeaveHistoryFragment : Fragment() {
 
-    // TODO: Rename and change types of parameters
+
     private var mParam1: String? = null
     private var mParam2: String? = null
 
@@ -46,7 +46,6 @@ class LeaveHistoryFragment : Fragment() {
         adapter.setItems(usecase.readLeaveRequestsHistory())
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     fun onButtonPressed(uri: Uri) {
         if (mListener != null) {
             mListener!!.onFragmentInteraction(uri)
@@ -68,8 +67,6 @@ class LeaveHistoryFragment : Fragment() {
     }
 
     companion object {
-        // TODO: Rename parameter arguments, choose names that match
-        // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
         private val ARG_PARAM1 = "param1"
         private val ARG_PARAM2 = "param2"
 

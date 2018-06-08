@@ -10,17 +10,17 @@ class RequestUseCase {
     private val newRequests = arrayListOf<Request>()
 
     fun readLeaveRequestsHistory() : ArrayList<Request>{
-        val request1 = Request("Godisnji odmor","pending","Leave",1)
-        val request2 = Request("Godisnji odmor","approved","Leave",1)
-        val request3 = Request("Bolovanje","rejected","Sickness",1)
-        val request4 = Request("Konferencija","canceled","Bonus Days",1)
+        val request1 = Request("Godisnji odmor","pending","Leave","01.02.2018.", 5, 1)
+        val request2 = Request("Godisnji odmor","approved","Leave","01.02.2018.", 5, 1)
+        val request3 = Request("Bolovanje","rejected","Sickness","01.02.2018.", 5, 1)
+        val request4 = Request("Konferencija","canceled","Bonus Days","01.02.2018.", 5, 1)
         val oldList = arrayListOf<Request>(request1, request2, request3, request4)
         oldList.addAll(0, newRequests)
         return oldList
     }
 
-    fun createRequest (reason: String, type:String) : Boolean{
-        val request = Request(reason, "pending", type, -1)
+    fun createRequest (reason: String, startDate: String, duration: Int) : Boolean{
+        val request = Request(reason, "pending", "pending", startDate, duration, -1)
         newRequests.add(request)
         return true
     }

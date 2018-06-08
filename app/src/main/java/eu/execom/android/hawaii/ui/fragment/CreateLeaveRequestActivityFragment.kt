@@ -21,20 +21,25 @@ class CreateLeaveRequestActivityFragment : Fragment(), DatePickerDialogFragment.
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         btnPickFrom.setOnClickListener({
-            showDatepickerDialog()
+            showDatepickerDialog(DatePickerDialogFragment.FROM)
         })
         btnPickTo.setOnClickListener({
-            showDatepickerDialog()
+            showDatepickerDialog(DatePickerDialogFragment.TO)
         })
     }
 
-    override fun setDate(year: Int, month: Int, day: Int) {
-        tvFrom.setText("${day}.${month}.${year}")
+    override fun setFromDate(year: Int, month: Int, day: Int) {
+        tvFrom.setText("From: ${day}.${month}.${year}")
     }
 
 
-    fun showDatepickerDialog() {
-        val newFragment = DatePickerDialogFragment()
+    override fun setToDate(year: Int, month: Int, day: Int) {
+        tvTo.setText("To: ${day}.${month}.${year}")
+    }
+
+
+    fun showDatepickerDialog(type: Int) {
+        val newFragment = DatePickerDialogFragment.newInstance(type)
         newFragment.setTargetFragment(this, 0)
         newFragment.show(activity.fragmentManager, "dialog_fragment")
     }

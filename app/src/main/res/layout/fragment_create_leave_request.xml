@@ -59,4 +59,11 @@
             android:text="Pick" />
     </LinearLayout>
 
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick" />
+
 </LinearLayout>

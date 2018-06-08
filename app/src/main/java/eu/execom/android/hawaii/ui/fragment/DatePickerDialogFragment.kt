@@ -16,8 +16,13 @@ class DatePickerDialogFragment : DialogFragment(), DatePickerDialog.OnDateSetLis
     private lateinit var calendar: Calendar
     private var listener: OnDialogFragmentInteractionListener? = null
 
+    private var type: Int = -1
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (arguments != null) {
+            type = arguments!!.getInt(TYPE)
+        }
         // check if parent Fragment implements listener
         try {
             listener = targetFragment as OnDialogFragmentInteractionListener
@@ -45,20 +50,35 @@ class DatePickerDialogFragment : DialogFragment(), DatePickerDialog.OnDateSetLis
         )
     }
 
-
     // When date set and press ok button in date picker dialog
     override fun onDateSet(view: DatePicker, year: Int, month: Int, day: Int) {
-        listener?.setDate(year, month, day)
-
+        when (type) {
+            FROM -> listener?.setFromDate(year, month, day)
+            TO -> listener?.setToDate(year, month, day)
+        }
     }
 
-    interface OnDialogFragmentInteractionListener{
-        fun setDate(year: Int, month: Int, day: Int)
+    interface OnDialogFragmentInteractionListener {
+        fun setFromDate(year: Int, month: Int, day: Int)
+        fun setToDate(year: Int, month: Int, day: Int)
     }
-
 
     override fun onDetach() {
         super.onDetach()
         listener = null
+    }
+
+    companion object {
+        val TYPE = "type"
+        val FROM = 0
+        val TO = 1
+
+        fun newInstance(type: Int): DatePickerDialogFragment {
+            val fragment = DatePickerDialogFragment()
+            val args = Bundle()
+            args.putInt(TYPE, type)
+            fragment.arguments = args
+            return fragment
+        }
     }
 }
