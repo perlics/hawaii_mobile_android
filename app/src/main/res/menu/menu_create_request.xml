@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/vacation"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Vacation" />
+
+    <item
+        android:id="@+id/sick"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Sick" />
+
+    <item
+        android:id="@+id/bonus"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Bonus" />
+
+
+</menu>

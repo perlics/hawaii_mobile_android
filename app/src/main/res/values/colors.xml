@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3e3e48</color>
+    <color name="colorPrimaryDark">#2b2b33</color>
+    <color name="colorAccent">#FFfb4b4f</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="colorStatusPending">#fdd835</color>
+    <color name="colorStatusApproved">#43a047</color>
+    <color name="colorStatusRejected">#f4511e</color>
+    <color name="colorStatusCanceled">#b0bec5</color>
+</resources>

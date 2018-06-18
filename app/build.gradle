@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "eu.execom.android.hawaii"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.android.support:appcompat-v7:$SupportVersion"
+    implementation "com.android.support:design:$SupportVersion"
+    implementation "com.android.support.constraint:constraint-layout:$ConstraintLayoutVersion"
+    implementation "com.android.support:recyclerview-v7:$SupportVersion"
+
+    //Testing
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.google.firebase:firebase-auth:11.6.0'
+    implementation 'com.google.android.gms:play-services-auth:11.6.0'
+    testImplementation "junit:junit:$JUnitVersion"
+    androidTestImplementation "com.android.support.test:runner:$TestRunnerVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$EspressoVersion"
+
+    //Fresco
+    implementation 'com.facebook.fresco:fresco:1.9.0'
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+
+    //Gson
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    //custom calendar
+    implementation 'com.applandeo:material-calendar-view:1.4.0'
+}
+
+apply plugin: 'com.google.gms.google-services'

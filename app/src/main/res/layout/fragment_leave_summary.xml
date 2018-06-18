@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/leftColumn"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/dates_requested"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dates requested: " />
+
+    <TextView
+        android:id="@+id/leave_requested"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leave requested:" />
+
+    <TextView
+        android:id="@+id/leave_remaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leave remaining:" />
+
+    <TextView
+        android:id="@+id/leave_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leave type:" />
+
+    <TextView
+        android:id="@+id/comment"
+        android:text="Comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rightColumn"
+        android:orientation="vertical"
+        android:layout_toEndOf="@id/leftColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10.05. - 10.05.2018 " />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 day(s) - 8 hours" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5 days - 40 hours" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Annual leave - Vacation" />
+
+    <TextView
+        android:text="Lorem ipsum rofl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+    <Button
+        android:textColor="@color/colorAccent"
+        android:text="SUBMIT"
+        android:layout_below="@id/rightColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    tools:context="eu.execom.android.hawaii.ui.fragment.request.LeaveFragment"
+    tools:showIn="@layout/activity_create_leave_request">
+
+    <TextView
+        android:id="@+id/new_leave"
+        android:layout_width="match_parent"
+        android:text="New Bonus Days Request"
+        android:textColor="@color/colorAccent"
+        android:layout_marginBottom="5dp"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/border_line"
+        android:layout_below="@id/new_leave"
+        android:layout_width="match_parent"
+        android:background="#000"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="2dp">
+    </View>
+
+    <FrameLayout
+        android:id="@+id/bonus_fragment_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

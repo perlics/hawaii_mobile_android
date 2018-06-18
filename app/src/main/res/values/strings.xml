@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Hawaii</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_logout">Logout</string>
+    <string name="title_activity_create_leave_request">CreateLeaveRequestActivity</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="team_calendar">Team Calendar</string>
+    <string name="company_calendar">Execom Calendar</string>
+    <string name="communicate">Communicate</string>
+    <string name="share">Share</string>
+    <string name="send">Send</string>
+
+    <string name="create_new_request">Create New Request</string>
+    <string name="reason_prompt">Choose a reason</string>
+    <string name="request">Request</string>
+    <string name="request_type">Select request type:</string>
+    <string name="type_of_leave">Type of Leave</string>
+    <string name="start">Start</string>
+    <string name="end">End</string>
+    <string name="full_day">Full Day</string>
+    <string name="afternoon_only">Afternoon Only</string>
+    <string name="morning_only">Morning only</string>
+    <string name="allowance_remaining">Allowance Remaining</string>
+    <string name="allowance_remaining_if_approved">Allowance Remaining (if approved)</string>
+    <string-array name="leave_reasons">
+        <item>Annual Vacation</item>
+        <item>Training /&amp; Education</item>
+        <item>Business Travel</item>
+        <item>Delivery or Adoption</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_sickness_fragment">Hello Sickness Fragment</string>
+    <string name="hello_bonus_fragment">Hello Bonus Fragment</string>
+
+</resources>
